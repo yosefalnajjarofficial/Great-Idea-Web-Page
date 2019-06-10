@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Teko&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*  {
+    padding: 0;
+    margin: 0;
+}  
+
+body { 
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+}
+
+header .logo {
+    flex: 1;
+    order: 2;
+}
+
+header nav {
+    flex: 4;
+    order: 1;
+    align-self: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    font-family: 'Play', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 5em;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #949494;
+}
+
+header nav ul li a:hover {
+    color: #505050;
+}
+
+.intro {
+    width: 100%;
+    display: flex;
+    margin: 4em 0;
+}
+
+.sidepic {
+    flex: 1;
+    order: 2;
+}
+
+.titleBtn {
+    flex: 2;
+    order: 1;
+    margin: auto 0;
+}
+
+.titleBtn h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 4em;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+.titleBtn a {
+    color: #000000;
+    text-decoration: none;
+    border: 1px solid #000000;
+    padding: 7px 40px;
+    margin: 1.5em auto;
+    display: block;
+    text-align: center;
+    width: 15%;
+}
+
+.titleBtn a:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.ideas {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr 0.6fr 1fr;
+    grid-gap: 0.5em 1em;
+}
+
+.ideas h2 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.1rem;
+    font-size: 1.1em;
+    margin-bottom: 1.1em;
+}
+
+.features{
+    grid-row: 1 / 2;
+    grid-column: 1 / span 3;
+    align-self: center;
+}
+
+.about{
+    grid-row: 1 / 2;
+    grid-column: 4 / span 3;
+    align-self: center;
+    width: 100%;
+}
+
+.middle{
+    grid-row: 2 / 4;
+    grid-column: 1 / 7;
+}
+
+.middle img{
+    width: 100%;
+}
+
+ .services{
+    grid-row: 4 / 5;
+    grid-column: 1 / span 2;
+}
+
+ .product{
+    grid-row: 4 / 5;
+    grid-column: 3 / span 2;
+}
+
+ .vision{
+    grid-row: 4 / 5;
+    grid-column: 5 / span 2;
+}
+
+.contact {
+    width: 100%;
+    margin: 2em 0;
+}
+
+.contact h2{
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.1rem;
+    font-size: 1em;
+    margin-bottom: 1.2em;
+}
+
+.contact address{
+    font-style: normal;
+}
+
+.contact a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    margin: 1em 0;
+}
+
+.contact a:hover {
+    color: #505050;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 0.4em 0;
+    margin-bottom: 1em;
+}
+
+footer h4 {
+    font-weight: 600;
+}
+
+hr {
+    border-top: 2px solid black;
+}
+
+/* Making the website look better on Tablets */
+@media (min-width: 979px) and (max-width: 1300px) {
+
+    header nav ul li {
+        margin-right: 2.5em;
+    }
+
+    .ideas {
+        margin-top: 2em;
+        grid-template-rows: 0.5fr 0.7fr 0.8fr;
+        grid-gap: 1.5em 1em;    
+    }
+
+    .middle {
+        grid-row: 2 / 3;
+    }
+
+    .services {
+        grid-row: 3 / 4;
+    }
+
+    .product {
+        grid-row: 3 / 4;
+    }
+
+    .vision {
+        grid-row: 3 / 4;
+    }
+}
+@media only screen and (max-width: 979px) {
+
+   header {
+       flex-direction: column;
+   }
+
+    header .logo {
+        order: 1;
+        align-self: center;
+    }
+
+    header nav {
+        margin: 2.5em 0;
+    }
+
+    header nav ul li {
+        margin-right: 2.7em;
+    }
+
+    .sidepic {
+        display: none;
+    }
+
+    .ideas {
+        margin-top: 2em;
+        grid-template-rows: 1fr 0.5fr 1fr 0.2fr;
+        grid-gap: 1.5em 1em;    
+    }
+
+    .middle {
+        grid-row: 2 / 3;
+    }
+
+    .services {
+        grid-row: 3 / 5;
+    }
+
+    .product {
+        grid-row: 3 / 5;
+    }
+
+    .vision {
+        grid-row: 3 / 5;
+    }
+}
+
+/* Making the website look better on phones */ 
+
+@media only screen and (max-width: 600px) {
+
+    main {
+        width: 90%;
+    }
+
+    header nav {
+        width: 110%;
+        margin: 1.2em 0;
+    }
+
+    header nav ul li:nth-child(1){
+        border-top: 1px solid #6b6b6b;
+    }
+
+    header nav ul li {
+       width: 100%;
+       display: block;
+       border-bottom: 1px solid #6b6b6b;
+       padding: 20px 0;
+       text-align: center;
+    }
+
+    .titleBtn a {
+        width: 20%;
+    }
+
+    .ideas {
+        display: block;
+    }
+
+    .ideas div:nth-child(1), div:nth-child(2), div:nth-child(3),
+           div:nth-child(4), div:nth-child(5), div:nth-child(6) {
+        margin: 2.5em 0;
+    }
+
+
+}
+
